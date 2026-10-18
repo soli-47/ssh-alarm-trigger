@@ -28,12 +28,14 @@ AUTH_PATTERNS = [
 
 # For auditd (/var/log/audit/audit.log).
 # exe is matched generically: /usr/sbin/sshd, /usr/libexec/openssh/sshd-session, ...
-_AUDIT_BASE = r'type=(?:USER_AUTH|USER_LOGIN)\b.*?exe="[^"]*/sshd(?:-session)?".*?'
+_AUDIT_BASE = (
+    r'type=USER_AUTH\b.*?op=PAM:authentication\b.*?'
+    r'exe="[^"]*/sshd(?:-session)?".*?'
+)
 AUDIT_PATTERNS = [
     ("ssh_failed", re.compile(_AUDIT_BASE + r"res=failed\b")),
     ("ssh_success", re.compile(_AUDIT_BASE + r"res=success\b")),
 ]
-
 
 def is_audit_path(path):
     return "audit" in str(path).lower()
