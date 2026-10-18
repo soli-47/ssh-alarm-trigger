@@ -1,0 +1,18 @@
+{
+  "database": "collector.db",
+  "bot_api_base": "https://tapi.bale.ai/bot{YOUR_API_KEY}/",
+  "chat_id": "YOUR_CHAT_ID",
+  "poll_interval": 5,
+  "batch_size": 10,
+  "timeout": 10,
+  "email": {
+    "enabled": true,
+    "smtp_host": "YOUR_SMTP_SERVER",
+    "smtp_port": 25,
+    "use_tls": true,
+    "sender": "YOUR_SMTP_SENDER_ACCOUNT",
+    "recipient": "YOUR_RECIPIENT",
+    "username" : "YOUR_SMTP_USER",
+    "password" : "YOUR_SMTP_USER-PASS"
+  }
+}

@@ -1,0 +1,18 @@
+# Secrets / real configs
+config.json
+sender_config.json
+.env
+
+# Data & logs
+*.db
+*.log
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Backup / misc
+befor/
+template-org.html

@@ -1,0 +1,10 @@
+{
+    "log_paths": [
+        "/var/log/auth.log",
+        "/var/log/audit/audit.log"
+    ],
+    "database": "collector.db",
+    "log_file": "collector.log",
+    "poll_interval": 3,
+    "start_at_end": true
+}
